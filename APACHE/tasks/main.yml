@@ -1,2 +1,12 @@
 ---
 # tasks file for APACHE
+- name: Install apache
+  yum:
+    name: httpd
+    state: latest
+- name: apache config file 
+  template:
+    src:  httpd.j2
+    dest: /etc/httpd/conf/httpd.conf
+  notify:
+  - restart httpd

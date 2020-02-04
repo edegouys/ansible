@@ -1,2 +1,4 @@
 ---
 # defaults file for APACHE
+  become:  yes
+  http_port:  81
