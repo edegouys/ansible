@@ -1,0 +1,15 @@
+--- #Ajout d'un groupe et d'un user Ansible
+- hosts: localhost
+  vars:
+    username: ansible
+    groupname:  ansible  
+  tasks:
+    - name: Add Ansible group
+      group:
+        name: "{{ groupname }}"
+        state: present
+    - name: Add Ansible user 
+      user:
+        name: "{{ username }}"
+        home: "/home/{{ username }}"
+        group: "{{ groupname }}"
