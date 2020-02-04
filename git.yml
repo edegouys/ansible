@@ -1,0 +1,11 @@
+--- #Playbook GIT version
+- hosts: localhost
+  tasks:
+  - name: print git version
+    command: git --version
+    register: GIT_V
+  # - debug: msg="{{ GIT_V.stdout_lines }}"
+  # - debug: msg="{{ GIT_V.stderr_lines }}"
+  - name: display GIT_V
+    debug:
+      var: GIT_V
