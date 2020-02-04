@@ -1,0 +1,4 @@
+---
+# defaults file for JENKINS
+  become:  yes
+  localhost:  8888
